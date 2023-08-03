@@ -10,12 +10,16 @@ import { JokesController } from './jokes/jokes.controller';
 import { ChuckNorrisService } from './jokes/jokes.service';
 import { WeatherController } from './openweathermap/weather.controller';
 import { OpenWeatherMapService } from './openweathermap/weather.service';
+import { SlackController } from './slack/slack.controller';
+import { SlackService } from './slack/slack.service';
+import { TwilioController } from './twilio/twilio.controller';
+import { TwilioService } from './twilio/twilio.service';
 
 
 
 @Module({
   imports: [PrismaModule, ArticlesModule, UsersModule, AuthModule, HttpModule],
-  controllers: [AppController, JokesController, WeatherController],
-  providers: [AppService, ChuckNorrisService, OpenWeatherMapService],
+  controllers: [AppController, JokesController, WeatherController, SlackController, TwilioController],
+  providers: [AppService, ChuckNorrisService, OpenWeatherMapService, SlackService, TwilioService],
 })
 export class AppModule {}

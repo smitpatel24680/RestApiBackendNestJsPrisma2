@@ -6,3 +6,14 @@ http://localhost:3000/jokes/random
 ###
 http://localhost:3000/weather/Surat
 
+
+
+####
+http://localhost:3000/slack/send
+Content-type: application/json
+{
+    "text": "Hello, world."
+}
+
+
+

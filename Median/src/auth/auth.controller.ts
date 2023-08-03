@@ -1,6 +1,6 @@
 //src/auth/auth.controller.ts
 
-import { Body, Controller, Post, Get, Param } from '@nestjs/common';
+import { Body, Controller, Post, Get, Param, Req } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { AuthEntity } from './entity/auth.entity';
@@ -17,6 +17,8 @@ export class AuthController {
   login(@Body() { email, password }: LoginDto) {
     return this.authService.login(email, password);
   }
+
+ 
 
 
   
